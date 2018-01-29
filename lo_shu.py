@@ -1,6 +1,6 @@
 # Mark Sherriff (mss2x)
 
-numbers = (input("Numbers: ")).split()
+numbers = (input("Input nine numbers for lo shu square: ")).split()
 
 square = [[0,0,0],[0,0,0],[0,0,0]]
 
