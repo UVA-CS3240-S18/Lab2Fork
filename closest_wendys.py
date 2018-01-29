@@ -36,6 +36,10 @@ for line in datafile:
 datafile.close()
 
 print("The closest Wendy's (", closest_wendys, ") is", closest_dist, "miles away.")
+if closest_dist < 15:
+    print("That's within driving distance!")
+else:
+    print("The nearest Wendy's is kind of far. Consider going to a McDonalds.g")
 google_maps_url = google_maps_url.replace(' ', '+')
 webbrowser.open(google_maps_url)
 
