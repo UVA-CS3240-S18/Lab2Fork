@@ -1,6 +1,6 @@
 # Mark Sherriff (mss2x)
 
-numbers = (input("Numbers: ")).split()
+numbers = (input("Input Nine Numbers for the Lo Shu Magic Square: ")).split()
 
 square = [[0,0,0],[0,0,0],[0,0,0]]
 
