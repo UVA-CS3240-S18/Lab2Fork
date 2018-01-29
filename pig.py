@@ -4,7 +4,6 @@ import random
 
 print("Welcome to Pig!")
 
-done = False
 player_temp_total = 0
 player_total = 0
 comp_temp_total = 0
@@ -12,8 +11,8 @@ comp_total = 0
 turn = "player"
 winning_score = 50
 
-while not done:
-    while turn == "player" and not done:
+while True:
+    while turn == "player":
         print()
         print("Player:", player_total, "Computer:", comp_total)
         print("It's your turn!")
@@ -34,9 +33,9 @@ while not done:
                 turn = "computer"
         if player_total > winning_score:
             print("You win! " + str(player_total) + " to " + str(comp_total))
-            done = True
+            exit(0)
 
-    while turn == "computer" and not done:
+    while turn == "computer":
         print()
         print("Player:", player_total, "Computer:", comp_total)
         print("It's the computer's turn!")
@@ -57,4 +56,4 @@ while not done:
                 turn = "player"
         if comp_total > winning_score:
             print("The computer wins! " + str(comp_total) + " to " + str(player_total))
-            done = True
+            exit(0)
