@@ -30,18 +30,11 @@ for i in range(3):
         print("Column " + str(i) + " fails the test!")
 
 # check diagonals
-if square[0][0] + square[1][1] + square[2][2] != 15:
+if square[0][0] + square[1][1] + square[2][2] != 15 or square[0][2] + square[1][1] + square[2][0] != 15:
     is_square = False
-    print("Left->Right diagonal fails the test!")
-
-if square[0][2] + square[1][1] + square[2][0] != 15:
-    is_square = False
-    print("Right->Left diagonal fails the test!")
+    print("Left->Right diagonal fails the test! or Right->Left diagonal fails the test!")
 
 if not is_square:
     print("This is not a Lo Shu Magic Square!")
 else:
     print("This is a valid Lo Shu Magic Square!")
-
-
-
