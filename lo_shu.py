@@ -21,7 +21,7 @@ for row in square:
 for row in square:
     if sum(row) != 15:
         is_square = False
-        print(str(row) + " fails the test!")
+        print("Row " + str(row) + " fails the test!")
 
 # check cols
 for i in range(3):
@@ -42,6 +42,3 @@ if not is_square:
     print("This is not a Lo Shu Magic Square!")
 else:
     print("This is a valid Lo Shu Magic Square!")
-
-
-
