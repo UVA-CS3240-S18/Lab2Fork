@@ -37,5 +37,6 @@ datafile.close()
 
 print("The closest Wendy's (", closest_wendys, ") is", closest_dist, "miles away.")
 google_maps_url = google_maps_url.replace(' ', '+')
+google_maps_url = "https://giphy.com/gifs/how-i-met-your-mother-clapping-himym-irnky0EUGEZnq"
 webbrowser.open(google_maps_url)
 
