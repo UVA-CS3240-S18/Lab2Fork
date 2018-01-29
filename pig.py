@@ -14,7 +14,8 @@ winning_score = 50
 
 while not done:
     while turn == "player" and not done:
-        print()
+        #print() - d-gds2wz
+        print('\n') # a-gds2wz better way to do it
         print("Player:", player_total, "Computer:", comp_total)
         print("It's your turn!")
         roll = random.randint(1,6)
@@ -37,7 +38,8 @@ while not done:
             done = True
 
     while turn == "computer" and not done:
-        print()
+        #print() - d-gds2wz
+        print('\n') # a-gds2wz better way to do it
         print("Player:", player_total, "Computer:", comp_total)
         print("It's the computer's turn!")
         roll = random.randint(1,6)
