@@ -21,27 +21,27 @@ for row in square:
 for row in square:
     if sum(row) != 15:
         is_square = False
-        print(str(row) + " fails the test! lul faillllllll")
+        print(str(row) + " fails the test! lul rekt")
 
 # check cols
 for i in range(3):
     if square[0][i] + square[1][i] + square[2][i] != 15:
         is_square = False
-        print("Column " + str(i) + " fails the test! why did you think that would work ?!?!?!?")
+        print("Column " + str(i) + " fails the test! jeBaited jeBaited jeBaited")
 
 # check diagonals
 if square[0][0] + square[1][1] + square[2][2] != 15:
     is_square = False
-    print("Left->Right diagonal fails the test! jeBaited jeBaited jeBaited")
+    print("Left->Right diagonal fails the test! did you actually think that would work?!?!?!?")
 
 if square[0][2] + square[1][1] + square[2][0] != 15:
     is_square = False
     print("Right->Left diagonal fails the test! Kappa Kappa Kappa")
 
 if not is_square:
-    print("This is not a Lo Shu Magic Square! what were you thinking lol?")
+    print("This is not a Lo Shu Magic Square! close but no cigar")
 else:
-    print("This is a valid Lo Shu Magic Square! congrats, genius")
+    print("This is a valid Lo Shu Magic Square! Winner Winner Chicken Dinner")
 
 
 
