@@ -8,9 +8,9 @@ count = 0
 
 is_square = True
 
-for i in range(3):
-    for j in range(3):
-        square[i][j] = int(numbers[count])
+for row in range(3):
+    for col in range(3):
+        square[row][col] = int(numbers[count])
         count += 1
 # print(square)
 print("You entered:")
