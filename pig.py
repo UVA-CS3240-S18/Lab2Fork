@@ -1,4 +1,6 @@
 # Mark Sherriff (mss2x)
+# edits made by: Andrea Chang (ayc3ue)
+# CS 3240 Lab 2
 
 import random
 
@@ -15,30 +17,34 @@ winning_score = 50
 while not done:
     while turn == "player" and not done:
         print()
-        print("Player:", player_total, "Computer:", comp_total)
+        print("Player:", player_total, "Computer: ", comp_total)
         print("It's your turn!")
         roll = random.randint(1,6)
         print("You rolled a", roll)
         if roll == 1:
             turn = "computer"
             player_temp_total = 0
-            print("PIG! Too bad! Your total is currently:", player_total)
+            print("PIG! Too bad! Your total is currently: ", player_total)
         else:
             player_temp_total += roll
             print("You currently have " + str(player_temp_total) + " banked.")
-            choice = input("Do you wish to roll again (y/n)?: ")
-            if choice == 'n':
+            choice = input("Do you wish to roll again (y/n)?: ").lower() #added lower() method to handle
+            # added more robust input error handling
+            if choice is not str('n') or choice is not str('y'):
+                choice = input("Invalid input. Do you wish to roll again? Enter (y/n): ")
+            if choice == 'n':#if choice is no
                 player_total += player_temp_total
                 player_temp_total = 0
-                print("Your total socre is now:", player_total)
+                print("Your total score is now: ", player_total)
                 turn = "computer"
+
         if player_total > winning_score:
             print("You win! " + str(player_total) + " to " + str(comp_total))
             done = True
 
     while turn == "computer" and not done:
         print()
-        print("Player:", player_total, "Computer:", comp_total)
+        print("Player: ", player_total, "Computer: ", comp_total)
         print("It's the computer's turn!")
         roll = random.randint(1,6)
         print("The computer rolled a", roll)
