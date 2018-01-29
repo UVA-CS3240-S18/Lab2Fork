@@ -27,7 +27,7 @@ for row in square:
 for i in range(3):
     if square[0][i] + square[1][i] + square[2][i] != 15:
         is_square = False
-        print("Column " + str(i) + " fails the test! jeBaited jeBaited jeBaited")
+        print("Column " + str(i) + " fails the test! jeBaited jeBaited jeBaited jeBaited")
 
 # check diagonals
 if square[0][0] + square[1][1] + square[2][2] != 15:
