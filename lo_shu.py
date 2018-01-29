@@ -21,13 +21,13 @@ for row in square:
 for row in square:
     if sum(row) != 15:
         is_square = False
-        print(str(row) + " fails the test!")
+        print("Row " + str(row) + " fails the test!")
 
 # check cols
-for i in range(3):
-    if square[0][i] + square[1][i] + square[2][i] != 15:
+for col in range(3):
+    if square[0][col] + square[1][col] + square[2][col] != 15:
         is_square = False
-        print("Column " + str(i) + " fails the test!")
+        print("Column " + str(col) + " fails the test!")
 
 # check diagonals
 if square[0][0] + square[1][1] + square[2][2] != 15:
