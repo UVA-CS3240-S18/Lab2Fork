@@ -27,6 +27,9 @@ while not done:
             player_temp_total += roll
             print("You currently have " + str(player_temp_total) + " banked.")
             choice = input("Do you wish to roll again (y/n)?: ")
+            if choice != 'y' and choice != 'n':
+                print("Please input a valid choice.")
+                choice = input("Do you wish to roll again (y/n)?: ")
             if choice == 'n':
                 player_total += player_temp_total
                 player_temp_total = 0
