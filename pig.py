@@ -10,7 +10,6 @@ player_total = 0
 comp_temp_total = 0
 comp_total = 0
 turn = "player"
-winning_score = 50
 
 while not done:
     while turn == "player" and not done:
