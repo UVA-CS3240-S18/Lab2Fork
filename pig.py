@@ -30,7 +30,7 @@ while not done:
             if choice == 'n':
                 player_total += player_temp_total
                 player_temp_total = 0
-                print("Your total socre is now:", player_total)
+                print("Your total score is now:", player_total)
                 turn = "computer"
         if player_total > winning_score:
             print("You win! " + str(player_total) + " to " + str(comp_total))
@@ -49,7 +49,7 @@ while not done:
         else:
             comp_temp_total += roll
             print("The computer has " + str(comp_temp_total) + " banked.")
-            if comp_temp_total > 6 or comp_total + comp_temp_total > winning_score:
+            if (comp_temp_total > 6 and random.randint(0, 1) > 0) or comp_total + comp_temp_total > winning_score:
                 print("The computer has chosen to end its turn.")
                 comp_total += comp_temp_total
                 comp_temp_total = 0
