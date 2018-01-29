@@ -13,7 +13,7 @@ for i in range(3):
         square[i][j] = int(numbers[count])
         count += 1
 # print(square)
-print("You entered:")
+print("You entered: ")
 for row in square:
     print(str(row[0]) + '\t' + str(row[1]) + '\t' + str(row[2]))
 
