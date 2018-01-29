@@ -4,7 +4,6 @@ import random
 
 print("Welcome to Pig!")
 
-done = False
 player_temp_total = 0
 player_total = 0
 comp_temp_total = 0
@@ -12,8 +11,8 @@ comp_total = 0
 turn = "player"
 winning_score = 50
 
-while not done:
-    while turn == "player" and not done:
+while True:
+    while turn == "player":
         print()
         print("Player:", player_total, "Computer:", comp_total)
         print("It's your turn!")
@@ -30,13 +29,13 @@ while not done:
             if choice == 'n':
                 player_total += player_temp_total
                 player_temp_total = 0
-                print("Your total socre is now:", player_total)
+                print("Your total score is now:", player_total)
                 turn = "computer"
-        if player_total > winning_score:
+        if player_total >= winning_score:
             print("You win! " + str(player_total) + " to " + str(comp_total))
-            done = True
+            break
 
-    while turn == "computer" and not done:
+    while turn == "computer":
         print()
         print("Player:", player_total, "Computer:", comp_total)
         print("It's the computer's turn!")
@@ -49,12 +48,12 @@ while not done:
         else:
             comp_temp_total += roll
             print("The computer has " + str(comp_temp_total) + " banked.")
-            if comp_temp_total > 6 or comp_total + comp_temp_total > winning_score:
+            if comp_temp_total >= 10 or comp_total + comp_temp_total >= winning_score:
                 print("The computer has chosen to end its turn.")
                 comp_total += comp_temp_total
                 comp_temp_total = 0
                 print("The computer's score is now:", comp_total)
                 turn = "player"
-        if comp_total > winning_score:
+        if comp_total >= winning_score:
             print("The computer wins! " + str(comp_total) + " to " + str(player_total))
-            done = True
+            break
