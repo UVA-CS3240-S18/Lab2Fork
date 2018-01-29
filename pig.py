@@ -13,9 +13,8 @@ turn = "player"
 winning_score = 50
 
 while not done:
-    while turn == "player" and not done:
-        print()
-        print("Player:", player_total, "Computer:", comp_total)
+    if turn == "player":
+        print(\n"Player:", player_total, "Computer:", comp_total)
         print("It's your turn!")
         roll = random.randint(1,6)
         print("You rolled a", roll)
@@ -36,9 +35,8 @@ while not done:
             print("You win! " + str(player_total) + " to " + str(comp_total))
             done = True
 
-    while turn == "computer" and not done:
-        print()
-        print("Player:", player_total, "Computer:", comp_total)
+    if turn == "computer":
+        print(\n"Player:", player_total, "Computer:", comp_total)
         print("It's the computer's turn!")
         roll = random.randint(1,6)
         print("The computer rolled a", roll)
