@@ -1,6 +1,11 @@
 # Mark Sherriff (mss2x)
 
-numbers = (input("Numbers: ")).split()
+numbers = []
+while True:
+    numbers = (input("Numbers: ")).split()
+    if len(numbers) == 9:
+        break
+    print ("You did not enter in 9 numbers!")
 
 square = [[0,0,0],[0,0,0],[0,0,0]]
 
