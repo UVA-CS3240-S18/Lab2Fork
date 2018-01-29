@@ -26,11 +26,11 @@ while not done:
         else:
             player_temp_total += roll
             print("You currently have " + str(player_temp_total) + " banked.")
-            choice = input("Do you wish to roll again (y/n)?: ")
+            choice = input("Do you wish to roll again (y/n)?: ").strip()
             if choice == 'n':
                 player_total += player_temp_total
                 player_temp_total = 0
-                print("Your total socre is now:", player_total)
+                print("Your total score is now:", player_total)
                 turn = "computer"
         if player_total > winning_score:
             print("You win! " + str(player_total) + " to " + str(comp_total))
