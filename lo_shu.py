@@ -8,9 +8,9 @@ count = 0
 
 is_square = True
 
-for i in range(3):
-    for j in range(3):
-        square[i][j] = int(numbers[count])
+for row in range(3):
+    for col in range(3):
+        square[row][col] = int(numbers[count])
         count += 1
 # print(square)
 print("You entered:")
@@ -24,10 +24,10 @@ for row in square:
         print(str(row) + " fails the test!")
 
 # check cols
-for i in range(3):
-    if square[0][i] + square[1][i] + square[2][i] != 15:
+for col in range(3):
+    if square[0][i] + square[1][col] + square[2][col] != 15:
         is_square = False
-        print("Column " + str(i) + " fails the test!")
+        print("Column " + str(col) + " fails the test!")
 
 # check diagonals
 if square[0][0] + square[1][1] + square[2][2] != 15:
