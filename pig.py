@@ -25,13 +25,19 @@ while not done:
             print("PIG! Too bad! Your total is currently:", player_total)
         else:
             player_temp_total += roll
-            print("You currently have " + str(player_temp_total) + " banked.")
-            choice = input("Do you wish to roll again (y/n)?: ")
-            if choice == 'n':
-                player_total += player_temp_total
-                player_temp_total = 0
-                print("Your total socre is now:", player_total)
-                turn = "computer"
+           while true:
+                print("You currently have " + str(player_temp_total) + " banked.")
+                choice = input("Do you wish to roll again (y/n)?: ")
+                if choice == 'n':
+                    player_total += player_temp_total
+                    player_temp_total = 0
+                    print("Your total socre is now:", player_total)
+                    turn = "computer"
+                    break
+                elif choice == 'y':
+                    break
+                else:
+                    print("Invalid input, try again")
         if player_total > winning_score:
             print("You win! " + str(player_total) + " to " + str(comp_total))
             done = True
