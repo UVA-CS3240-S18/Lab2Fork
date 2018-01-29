@@ -2,6 +2,9 @@
 
 import math
 import webbrowser
+#Note: the requests library must be installed for this change to work
+import requests
+import json
 
 google_maps_url = "https://www.google.com/maps/@35.372742,-81.954957,15z?hl=en"
 
@@ -14,11 +17,11 @@ def distance_between(lat_1, lon_1, lat_2, lon_2):
 
     return dist
 
-#lat = float(input("Current latitude: "))
-#lon = float(input("Current longitude: "))
-
-lat = 38.0322727
-lon = -78.50997339999999
+geo_locator_url = 'http://freegeoip.net/json'
+response = requests.get(geo_locator_url)
+result = json.loads(response.text)
+lon = result['longitude']
+lat = result['latitude']
 datafile = open("wendys.csv", "r")
 
 closest_dist = 200
