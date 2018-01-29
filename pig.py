@@ -1,4 +1,6 @@
 # Mark Sherriff (mss2x)
+# Note: I took CS 1110 when it was still taught in Java... so here's a cool project I did over the summer instead.
+# https://imgur.com/a/UGnwP
 
 import random
 
