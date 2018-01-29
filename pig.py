@@ -3,6 +3,7 @@
 import random
 
 print("Welcome to Pig!")
+print("Pig is a strategy dice game.")
 
 done = False
 player_temp_total = 0
@@ -10,7 +11,7 @@ player_total = 0
 comp_temp_total = 0
 comp_total = 0
 turn = "player"
-winning_score = 50
+winning_score = 100
 
 while not done:
     while turn == "player" and not done:
