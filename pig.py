@@ -32,6 +32,8 @@ while not done:
                 player_temp_total = 0
                 print("Your total socre is now:", player_total)
                 turn = "computer"
+            else if (choice != 'n' or choice != 'y'):
+                choice = input("Invalid iinput please use y/n")
         if player_total > winning_score:
             print("You win! " + str(player_total) + " to " + str(comp_total))
             done = True
