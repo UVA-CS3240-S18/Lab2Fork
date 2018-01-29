@@ -21,7 +21,7 @@ lat = 38.0322727
 lon = -78.50997339999999
 datafile = open("wendys.csv", "r")
 
-closest_dist = 200
+closest_dist = 10000000000000000000
 closest_wendys = ""
 
 for line in datafile:
@@ -38,4 +38,3 @@ datafile.close()
 print("The closest Wendy's (", closest_wendys, ") is", closest_dist, "miles away.")
 google_maps_url = google_maps_url.replace(' ', '+')
 webbrowser.open(google_maps_url)
-
