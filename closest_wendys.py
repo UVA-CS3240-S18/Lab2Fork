@@ -14,11 +14,9 @@ def distance_between(lat_1, lon_1, lat_2, lon_2):
 
     return dist
 
-#lat = float(input("Current latitude: "))
-#lon = float(input("Current longitude: "))
+lat = float(input("Current latitude: "))
+lon = float(input("Current longitude: "))
 
-lat = 38.0322727
-lon = -78.50997339999999
 datafile = open("wendys.csv", "r")
 
 closest_dist = 200
@@ -38,4 +36,3 @@ datafile.close()
 print("The closest Wendy's (", closest_wendys, ") is", closest_dist, "miles away.")
 google_maps_url = google_maps_url.replace(' ', '+')
 webbrowser.open(google_maps_url)
-
