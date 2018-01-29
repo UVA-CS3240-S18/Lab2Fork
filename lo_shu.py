@@ -6,6 +6,10 @@ square = [[0,0,0],[0,0,0],[0,0,0]]
 
 count = 0
 
+if len(square) != 9:
+    print("Not valid set of numbers!")
+    del numbers[:]
+    numbers = (input("Numbers: ")).split()
 is_square = True
 
 for i in range(3):
@@ -38,10 +42,10 @@ if square[0][2] + square[1][1] + square[2][0] != 15:
     is_square = False
     print("Right->Left diagonal fails the test!")
 
-if not is_square:
-    print("This is not a Lo Shu Magic Square!")
-else:
+if is_square:
     print("This is a valid Lo Shu Magic Square!")
+else:
+    print("This is not a Lo Shu Magic Square!")
 
 
 
